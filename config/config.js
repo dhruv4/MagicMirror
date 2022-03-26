@@ -9,18 +9,18 @@
  */
 let config = {
 	address: "0.0.0.0", 	// Address to listen on, can be:
-							// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
-							// - another specific IPv4/6 to listen on a specific interface
-							// - "0.0.0.0", "::" to listen on any interface
-							// Default, when address config is left out or empty, is "localhost"
+	// - "localhost", "127.0.0.1", "::1" to listen on loopback interface
+	// - another specific IPv4/6 to listen on a specific interface
+	// - "0.0.0.0", "::" to listen on any interface
+	// Default, when address config is left out or empty, is "localhost"
 	port: 8080,
 	basePath: "/", 	// The URL path where MagicMirror is hosted. If you are using a Reverse proxy
-					// you must set the sub path here. basePath must end with a /
+	// you must set the sub path here. basePath must end with a /
 	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.255", "::ffff:192.168.1.18", "::ffff:192.168.1.10", "::ffff:192.168.1.9", "192.168.1.10", "192.168.1.9"], 	// Set [] to allow all IP addresses
-															// or add a specific IPv4 of 192.168.1.5 :
-															// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
-															// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
-															// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
+	// or add a specific IPv4 of 192.168.1.5 :
+	// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.1.5"],
+	// or IPv4 range of 192.168.3.0 --> 192.168.3.15 use CIDR format :
+	// ["127.0.0.1", "::ffff:127.0.0.1", "::1", "::ffff:192.168.3.0/28"],
 
 	useHttps: false, 		// Support HTTPS or not, default "false" will use HTTP
 	httpsPrivateKey: "", 	// HTTPS private key path, only require when useHttps is true
@@ -120,19 +120,6 @@ let config = {
 				broadcastNewsUpdates: true
 			}
 		},
-		//{
-		//  module: 'MMM-awesome-alexa',
-		//  position: 'bottom_bar',
-		//  config: {
-		//    wakeWord: 'Smart Mirror',
-		//    clientId: 'amzn1.application-oa2-client.b40e3c966ba142d088d3c966c09a24d2',
-		//    clientSecret: 'e895d6829cdfa0ba993366055c80738aaf8c811944e0ccb198c12bac24d5ee91',
-		//    deviceId: 'SmartMirror',
-		//    refreshToken: 'Atzr|IwEBIGo0CJO2jcpla_ixSMPF4KjBJLWqd9zlyT1yTPJuE2y63WfcGL2k-zkp4T1P4_A_gTh1tVMAMZlGx2AWwcxkqMYQZO0fvQuSepLbZmCWrEa_Y-9J8EKvGKIxKF0t0iPnxk57_QDysbaJlzEEZNjR832GA5Jc7Xdl1GhAb3HpAjJC4LCFV21J5cZ8GrQ02q_uwHMcBoqSVRNoTZ8bP8kw8wQ8LiJWCHs1V6Mk58CvPUxHg9iYbPQG8mIw5iAaQ2hYOeVYcvI1qeQ_oVhIViznB2Z8h60OeM44KJSwOmXoV6FTROLKElfweIgvBQ4_L2yRoUPgUPUIEncXJ4MHdi2s1iiUODAWKjsgTgFxArQjN8eGBw',
-		//    lite: false,
-		//    isSpeechVisualizationEnabled: true
-		//  }
-		//},
 		{
 			module: 'MMM-Remote-Control',
 			// uncomment the following line to show the URL of the remote control on the mirror
@@ -148,8 +135,21 @@ let config = {
 				// classes: {} // Optional, See "Custom Classes" below
 			}
 		},
+		//{
+		//  module: 'MMM-awesome-alexa',
+		//  position: 'bottom_bar',
+		//  config: {
+		//    wakeWord: 'Smart Mirror',
+		//    clientId: 'amzn1.application-oa2-client.b40e3c966ba142d088d3c966c09a24d2',
+		//    clientSecret: 'e895d6829cdfa0ba993366055c80738aaf8c811944e0ccb198c12bac24d5ee91',
+		//    deviceId: 'SmartMirror',
+		//    refreshToken: 'Atzr|IwEBIGo0CJO2jcpla_ixSMPF4KjBJLWqd9zlyT1yTPJuE2y63WfcGL2k-zkp4T1P4_A_gTh1tVMAMZlGx2AWwcxkqMYQZO0fvQuSepLbZmCWrEa_Y-9J8EKvGKIxKF0t0iPnxk57_QDysbaJlzEEZNjR832GA5Jc7Xdl1GhAb3HpAjJC4LCFV21J5cZ8GrQ02q_uwHMcBoqSVRNoTZ8bP8kw8wQ8LiJWCHs1V6Mk58CvPUxHg9iYbPQG8mIw5iAaQ2hYOeVYcvI1qeQ_oVhIViznB2Z8h60OeM44KJSwOmXoV6FTROLKElfweIgvBQ4_L2yRoUPgUPUIEncXJ4MHdi2s1iiUODAWKjsgTgFxArQjN8eGBw',
+		//    lite: false,
+		//    isSpeechVisualizationEnabled: true
+		//  }
+		//},
 	]
 };
 
 /*************** DO NOT EDIT THE LINE BELOW ***************/
-if (typeof module !== "undefined") {module.exports = config;}
+if (typeof module !== "undefined") { module.exports = config; }
